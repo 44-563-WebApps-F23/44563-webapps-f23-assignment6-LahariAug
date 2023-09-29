@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <title>Assignemnt 6</title>
+<body>
+<h1>Author Entry Ravipati.Venkata Lahari</h1>
+<h2>Getting input</h2>
+
+<form>
+    <label for="secret_value">The hidden author name</label>
+    <input type ="password" id="secret_value" name="secret_value" value="Dickens" required> <br>
+
+    <label for="secret_element">Guess the author</label>
+    <input type ="text" id="secret_element" name="secret_element"> <br>
+
+    <input type="button" onclick="checKAuthor()" value="Guess the author">
+</form>
+
+
+<p id="result">Right/Wrong</p>
+
+<script> 
+
+function checKAuthor(){
+    let good=0;
+    let oops=0;
+    hidden_author  = document.getElementById("secret_value").value;
+    hidden_element = document.getElementById("secret_element").value;
+    hidden_result = document.getElementById("result");
+    if(hidden_author===hidden_element){
+        alert("You got it right");
+        good++;
+        hidden_result.innerHTML = `Good Guess: ${good}`;
+        
+    } else {
+        alert("Sorry");
+        oops++;
+        hidden_result.innerHTML = `Wrong Guess: ${oops}`;
+        
+    }
+}
+</script>
+
+</body>
+</html> 
