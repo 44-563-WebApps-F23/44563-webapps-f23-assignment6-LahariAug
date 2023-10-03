@@ -2,7 +2,9 @@
 # WebApps-F23-Assignment-6
 Introduction to Java Script and DOM
 
-Hosted At [Author Page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-LahariAug/author.html)<br>
+Hosted At 
+
+[Author Page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-LahariAug/author.html)<br>
 
 [Tips Page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-LahariAug/tips.html)<br>
 
