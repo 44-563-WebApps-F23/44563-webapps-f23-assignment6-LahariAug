@@ -36,5 +36,43 @@ function tips(){
 }
 </script>
 
+<form>
+    <input type="radio" id="sum" name="operation" value="sum"  checked >
+    <label for="sum">Sum</label></br>
+  
+    <input type="radio" id="difference" name="operation" value="difference">
+    <label for="difference">Diff</label></br>
+  
+    <input type="radio" id="product"  name="operation" value="product">
+    <label for="product">Mult</label></br>
+
+    <input type="button" onclick="chooseOp()" value="Get values from radio group">
+
+    <p id="result1">Operations are</p>
+  </form>
+
+  <script>
+    function chooseOp()
+    {
+        var Amount = parseFloat(document.getElementById("amount").value);
+        var Tip = parseFloat(document.getElementById("tippercent").value);  
+        var Operation = document.querySelector('input[name="operation"]:checked').value;
+        var result1;
+        switch(Operation)
+        {
+            case "sum" :
+                result1= Amount+Tip;
+                break;
+            case "difference" :
+                result1= Amount-Tip;
+                break;
+            case "product" :
+                result1= Amount*Tip;
+                break;
+        } 
+        document.getElementById("result1").innerHTML = `${Operation} of ${Amount} and ${Tip} is ${result1}`;
+    }
+  </script>
+
 </body>
 </html> 
