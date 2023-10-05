@@ -29,16 +29,22 @@ function checKAuthor(){
     hidden_element = document.getElementById("secret_element").value;
     hidden_result = document.getElementById("result");
     if(hidden_author===hidden_element){
-        alert("You got it right");
         good++;
+        alert("You got it right");
         hidden_result.innerHTML = `Good Guess: ${good}`;
         
     } else {
-        alert("Sorry");
         oops++;
+        if(oops >=7){
+            document.getElementById("display").onclick=myguess();
+        }
+        alert("Sorry");
         hidden_result.innerHTML = `Wrong Guess: ${oops}`;
         
     }
+}
+function myguess(){
+    alert("Sorry you run out of guess!");
 }
 </script>
 <script>
